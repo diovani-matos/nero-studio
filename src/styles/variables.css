@@ -1,0 +1,23 @@
+:root {
+  /* Cores */
+  --color-bg: #080808;
+  --color-bg-card: #111111;
+  --color-border: #1A1A1A;
+  --color-text: #F5F5F5;
+  --color-muted: #888888;
+  --color-accent: #C9A84C;
+  --color-accent-light: #E8C96A;
+  --color-accent-dark: #2A1F0A;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+
+  /* Tipografia */
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-dm-sans);
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-padding: clamp(1.5rem, 5vw, 3rem);
+  --radius: 4px;
+  --transition: 0.2s ease;
+}

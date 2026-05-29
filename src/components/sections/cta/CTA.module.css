@@ -1,0 +1,193 @@
+/* ─── Section shell ─────────────────────────────────────────── */
+.section {
+  position: relative;
+  padding: 10rem var(--container-padding);
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+/* ─── Decorative "NERO" — CSS pseudo, always visible ────────── */
+.section::before {
+  content: "NERO";
+  position: absolute;
+  right: -3rem;
+  bottom: -3rem;
+  font-family: var(--font-display);
+  font-size: clamp(15rem, 25vw, 22rem);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201, 168, 76, 0.15);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.8;
+  z-index: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ─── Inner grid ────────────────────────────────────────────── */
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+/* ─── Left column ───────────────────────────────────────────── */
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Tag ───────────────────────────────────────────────────── */
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.tagLine {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ─── Title ─────────────────────────────────────────────────── */
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  color: var(--color-text);
+}
+
+.title span {
+  display: block;
+}
+
+.titleAccent {
+  color: var(--color-accent);
+}
+
+/* ─── Subtext ───────────────────────────────────────────────── */
+.subtext {
+  margin-top: 2rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+/* ─── Right column ──────────────────────────────────────────── */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ─── Primary button ────────────────────────────────────────── */
+.btnPrimary {
+  display: inline-block;
+  width: fit-content;
+  padding: 1.1rem 2.5rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.btnPrimary:hover {
+  background: var(--color-accent-light);
+}
+
+/* ─── Secondary button ──────────────────────────────────────── */
+.btnSecondary {
+  display: inline-block;
+  width: fit-content;
+  padding: 1.1rem 2.5rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.btnSecondary:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+/* ─── Trust line ────────────────────────────────────────────── */
+.trust {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.trustDot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ─── Mobile ────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .section {
+    padding: 6rem var(--container-padding);
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .trust {
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,232 @@
+/* ─── Section shell ─────────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  background: var(--color-bg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 6rem;
+}
+
+/* ─── Decorative vertical line ──────────────────────────────── */
+.decorLine {
+  position: absolute;
+  left: var(--container-padding);
+  top: 20%;
+  height: 25%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-accent),
+    transparent
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── Headline ──────────────────────────────────────────────── */
+.headlineWrapper {
+  position: absolute;
+  top: 50%;
+  left: var(--container-padding);
+  right: var(--container-padding);
+  max-width: var(--container-max);
+  width: calc(100% - var(--container-padding) * 2);
+  margin: 0 auto;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 900;
+  line-height: 0.9;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+}
+
+.line {
+  display: block;
+}
+
+.word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  /* gap between words */
+  margin-right: 0.25em;
+}
+
+.word:last-child {
+  margin-right: 0;
+}
+
+.wordInner {
+  display: block;
+}
+
+/* ─── Marquee ───────────────────────────────────────────────── */
+.marqueeWrapper {
+  position: absolute;
+  top: calc(50% + clamp(4rem, 8vw, 7rem));
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.marqueeTrack {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+.marqueeText {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.33%);
+  }
+}
+
+/* ─── Subtitle ──────────────────────────────────────────────── */
+.subtitle {
+  position: absolute;
+  bottom: 6rem;
+  left: var(--container-padding);
+  max-width: 380px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-muted);
+  line-height: 1.7;
+  z-index: 2;
+}
+
+/* ─── Stats ─────────────────────────────────────────────────── */
+.stats {
+  position: absolute;
+  bottom: 6rem;
+  right: var(--container-padding);
+  display: flex;
+  align-items: flex-end;
+  gap: 3rem;
+  z-index: 2;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.statSuffix {
+  color: var(--color-accent);
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted);
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+
+/* ─── Bottom border ─────────────────────────────────────────── */
+.borderBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+  pointer-events: none;
+}
+
+/* ─── Mobile ────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .hero {
+    justify-content: flex-start;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  .headlineWrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    padding: 0 var(--container-padding);
+    box-sizing: border-box;
+  }
+
+  .headline {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+
+  .subtitle {
+    display: none;
+  }
+
+  .stats {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 2rem;
+    padding: 0 var(--container-padding);
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .marqueeWrapper {
+    top: auto;
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  .decorLine {
+    display: none;
+  }
+
+  .borderBottom {
+    display: none;
+  }
+}

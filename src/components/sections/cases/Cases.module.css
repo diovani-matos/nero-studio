@@ -1,0 +1,208 @@
+/* ─── Section shell ─────────────────────────────────────────── */
+.section {
+  padding: 10rem var(--container-padding);
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ─── Container ─────────────────────────────────────────────── */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* ─── Header ────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5rem;
+}
+
+.headLeft {
+  flex-shrink: 0;
+}
+
+/* ─── Tag ───────────────────────────────────────────────────── */
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.tagLine {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ─── Title ─────────────────────────────────────────────────── */
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  color: var(--color-text);
+}
+
+.title span {
+  display: block;
+}
+
+/* ─── View all link ─────────────────────────────────────────── */
+.viewAll {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  padding-bottom: 0.25rem;
+}
+
+.viewAll:hover {
+  color: var(--color-accent);
+}
+
+/* ─── Grid ──────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--color-border);
+}
+
+/* ─── Card ──────────────────────────────────────────────────── */
+.card {
+  background: var(--color-bg);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.card:hover {
+  background: var(--color-bg-card);
+}
+
+/* ─── Case number ───────────────────────────────────────────── */
+.caseNumber {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-border);
+  line-height: 1;
+  transition: -webkit-text-stroke-color 0.3s ease;
+  user-select: none;
+}
+
+.card:hover .caseNumber {
+  -webkit-text-stroke-color: var(--color-accent);
+  opacity: 0.5;
+}
+
+/* ─── Category ──────────────────────────────────────────────── */
+.category {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+}
+
+/* ─── Case title ────────────────────────────────────────────── */
+.caseTitle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+/* ─── Result badge ──────────────────────────────────────────── */
+.result {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-accent-dark);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  width: fit-content;
+}
+
+.resultValue {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.resultLabel {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  line-height: 1.3;
+}
+
+/* ─── Description ───────────────────────────────────────────── */
+.description {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  font-weight: 300;
+  flex: 1;
+}
+
+/* ─── Case link ─────────────────────────────────────────────── */
+.caseLink {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  transition: color 0.2s ease;
+  margin-top: auto;
+}
+
+.card:hover .caseLink {
+  color: var(--color-accent);
+}
+
+/* ─── Mobile ────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .section {
+    padding: 6rem var(--container-padding);
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 2.5rem 1.5rem;
+  }
+}
