@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
     ],
-    sitemap: 'https://nerostudio.com.br/sitemap.xml',
-    host: 'https://nerostudio.com.br',
+    sitemap: 'https://nero-studio.vercel.app/sitemap.xml',
+    host: 'https://nero-studio.vercel.app',
   }
 }

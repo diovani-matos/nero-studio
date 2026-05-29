@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://nerostudio.com.br',
+  siteUrl: 'https://nero-studio.vercel.app',
   generateRobotsTxt: false,
   changefreq: 'monthly',
   priority: 0.7,

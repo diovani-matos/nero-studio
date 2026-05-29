@@ -24,14 +24,14 @@ export const metadata: Metadata = {
   title: 'Nero Studio — Agência de Marketing Digital',
   description:
     'Nero Studio é uma agência full service de marketing digital em São Paulo. Tráfego pago, social media, branding, SEO e criação de sites com resultados comprovados.',
-  metadataBase: new URL('https://nerostudio.com.br'),
+  metadataBase: new URL('https://nero-studio.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://nerostudio.com.br',
+    url: 'https://nero-studio.vercel.app',
     siteName: 'Nero Studio',
     title: 'Nero Studio — Agência de Marketing Digital',
     description:
@@ -69,10 +69,10 @@ export default function RootLayout({
               '@graph': [
                 {
                   '@type': 'Organization',
-                  '@id': 'https://nerostudio.com.br/#organization',
+                  '@id': 'https://nero-studio.vercel.app/#organization',
                   name: 'Nero Studio',
-                  url: 'https://nerostudio.com.br',
-                  logo: 'https://nerostudio.com.br/logo.png',
+                  url: 'https://nero-studio.vercel.app',
+                  logo: 'https://nero-studio.vercel.app/logo.png',
                   description:
                     'Agência de marketing digital full service em São Paulo. Tráfego pago, social media, branding, SEO e criação de sites.',
                   address: {
@@ -94,9 +94,9 @@ export default function RootLayout({
                 },
                 {
                   '@type': 'LocalBusiness',
-                  '@id': 'https://nerostudio.com.br/#localbusiness',
+                  '@id': 'https://nero-studio.vercel.app/#localbusiness',
                   name: 'Nero Studio',
-                  url: 'https://nerostudio.com.br',
+                  url: 'https://nero-studio.vercel.app',
                   priceRange: '$$',
                   address: {
                     '@type': 'PostalAddress',
