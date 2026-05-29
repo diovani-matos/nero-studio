@@ -15,7 +15,7 @@ const CASES = [
     resultLabel: 'em vendas em 6 meses',
     description:
       'Estratégia completa de tráfego pago e social media que transformou uma loja local em referência nacional do segmento.',
-    href: '/cases/moda',
+    href: '#',
   },
   {
     number: '02',
@@ -25,7 +25,7 @@ const CASES = [
     resultLabel: 'de agendamentos via digital',
     description:
       'SEO local, Google Ads e presença nas redes sociais que eliminou os horários vazios em menos de 90 dias.',
-    href: '/cases/clinica',
+    href: '#',
   },
   {
     number: '03',
@@ -35,7 +35,7 @@ const CASES = [
     resultLabel: 'em imóveis vendidos',
     description:
       'Campanhas de Meta Ads e Google Ads com landing pages otimizadas que geraram leads qualificados de alto ticket.',
-    href: '/cases/construtora',
+    href: '#',
   },
 ]
 
@@ -119,7 +119,7 @@ export function Cases() {
         {/* Cases grid */}
         <div ref={gridRef} className={styles.grid}>
           {CASES.map(({ number, category, title, resultValue, resultLabel, description, href }) => (
-            <Link key={number} href={href} className={styles.card}>
+            <Link key={number} href={href} className={styles.card} onClick={(e) => e.preventDefault()}>
               <span className={styles.caseNumber} aria-hidden="true">
                 {number}
               </span>

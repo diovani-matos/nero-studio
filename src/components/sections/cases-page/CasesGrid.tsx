@@ -20,7 +20,7 @@ const CASES = [
       'Uma loja de moda feminina com presença apenas local precisava escalar para o digital. Desenvolvemos estratégia completa de tráfego pago no Meta e Google, combinada com gestão de social media focada em conversão. Em 6 meses, as vendas triplicaram e a marca se tornou referência no segmento.',
     services: ['Tráfego Pago', 'Social Media'],
     metric: 'ROI de 8:1',
-    href: '/cases/moda',
+    href: '#',
   },
   {
     number: '02',
@@ -33,7 +33,7 @@ const CASES = [
       'Clínica de medicina integrativa com baixa visibilidade digital e agenda com muitos horários vazios. Implementamos SEO local, Google Ads segmentado por especialidade e presença estratégica no Instagram. Em 90 dias, a agenda estava lotada com lista de espera.',
     services: ['SEO', 'Tráfego Pago', 'Social Media'],
     metric: '90 dias para agenda cheia',
-    href: '/cases/clinica',
+    href: '#',
   },
   {
     number: '03',
@@ -46,7 +46,7 @@ const CASES = [
       'Construtora com novo lançamento residencial de alto padrão precisava gerar leads qualificados rapidamente. Criamos landing pages otimizadas para cada perfil de comprador e campanhas segmentadas no Meta e Google. Em 60 dias, todas as unidades foram vendidas.',
     services: ['Tráfego Pago', 'Branding'],
     metric: '100% das unidades vendidas',
-    href: '/cases/construtora',
+    href: '#',
   },
 ]
 
@@ -147,7 +147,7 @@ export function CasesGrid() {
               metric,
               href,
             }) => (
-              <Link key={number} href={href} className={styles.card}>
+              <Link key={number} href={href} className={styles.card} onClick={(e) => e.preventDefault()}>
                 {/* Card top */}
                 <div className={styles.cardTop}>
                   <span className={styles.caseNumber} aria-hidden="true">

@@ -17,8 +17,6 @@ const SERVICES = [
 const COMPANY = [
   { label: 'Sobre nós', href: '/sobre' },
   { label: 'Cases', href: '/cases' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Carreiras', href: '/carreiras' },
 ]
 
 export function Footer() {
@@ -172,11 +170,11 @@ export function Footer() {
             © {year} Nero Studio. Todos os direitos reservados.
           </p>
           <div className={styles.legal}>
-            <Link href="/privacidade" className={styles.legalLink}>
+            <Link href="#" className={styles.legalLink}>
               Privacidade
             </Link>
             <span className={styles.legalDot} aria-hidden="true">·</span>
-            <Link href="/termos" className={styles.legalLink}>
+            <Link href="#" className={styles.legalLink}>
               Termos
             </Link>
           </div>
